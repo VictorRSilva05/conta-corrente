@@ -26,6 +26,11 @@ namespace ContaCorrente.WinFormsApp
 
             MessageBox.Show("Account registred!");
 
+            ClearRegistrationTextBoxes();
+        }
+
+        private void ClearRegistrationTextBoxes()
+        {
             textBoxName.Clear();
             textBoxNumber.Clear();
             textBoxInitialBalance.Clear();
@@ -34,10 +39,14 @@ namespace ContaCorrente.WinFormsApp
 
         private void buttonNew_Click(object sender, EventArgs e)
         {
-            textBoxName.Clear();
-            textBoxNumber.Clear();
-            textBoxInitialBalance.Clear();
-            textBoxLimit.Clear();
+            ClearRegistrationTextBoxes();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+
+            MessageBox.Show(account.CheckBalance());
         }
     }
 }

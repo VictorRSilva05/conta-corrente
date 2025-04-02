@@ -39,7 +39,20 @@
             buttonSave = new Button();
             labelLimit = new Label();
             textBoxLimit = new TextBox();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            label2 = new Label();
+            textBoxAccountNumberMovimentation = new TextBox();
+            label3 = new Label();
+            textBox3 = new TextBox();
+            button2 = new Button();
+            button1 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            label1 = new Label();
+            textBox1 = new TextBox();
             tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,7 +71,7 @@
             tableLayoutPanel1.Controls.Add(buttonSave, 1, 4);
             tableLayoutPanel1.Controls.Add(labelLimit, 0, 3);
             tableLayoutPanel1.Controls.Add(textBoxLimit, 1, 3);
-            tableLayoutPanel1.Location = new Point(32, 69);
+            tableLayoutPanel1.Location = new Point(12, 115);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 51.6666679F));
@@ -93,14 +106,14 @@
             // 
             textBoxName.Location = new Point(153, 3);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(100, 23);
+            textBoxName.Size = new Size(108, 23);
             textBoxName.TabIndex = 2;
             // 
             // textBoxNumber
             // 
             textBoxNumber.Location = new Point(153, 34);
             textBoxNumber.Name = "textBoxNumber";
-            textBoxNumber.Size = new Size(100, 23);
+            textBoxNumber.Size = new Size(108, 23);
             textBoxNumber.TabIndex = 3;
             // 
             // labelInitialBalance
@@ -116,14 +129,14 @@
             // 
             textBoxInitialBalance.Location = new Point(153, 63);
             textBoxInitialBalance.Name = "textBoxInitialBalance";
-            textBoxInitialBalance.Size = new Size(100, 23);
+            textBoxInitialBalance.Size = new Size(108, 23);
             textBoxInitialBalance.TabIndex = 5;
             // 
             // buttonNew
             // 
             buttonNew.Location = new Point(3, 125);
             buttonNew.Name = "buttonNew";
-            buttonNew.Size = new Size(75, 23);
+            buttonNew.Size = new Size(144, 23);
             buttonNew.TabIndex = 7;
             buttonNew.Text = "New";
             buttonNew.UseVisualStyleBackColor = true;
@@ -133,7 +146,7 @@
             // 
             buttonSave.Location = new Point(153, 125);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(75, 23);
+            buttonSave.Size = new Size(108, 23);
             buttonSave.TabIndex = 6;
             buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = true;
@@ -152,19 +165,144 @@
             // 
             textBoxLimit.Location = new Point(153, 95);
             textBoxLimit.Name = "textBoxLimit";
-            textBoxLimit.Size = new Size(100, 23);
+            textBoxLimit.Size = new Size(108, 23);
             textBoxLimit.TabIndex = 9;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 5;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 56.69643F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 43.30357F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 107F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 116F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 109F));
+            tableLayoutPanel2.Controls.Add(label2, 0, 0);
+            tableLayoutPanel2.Controls.Add(textBoxAccountNumberMovimentation, 1, 0);
+            tableLayoutPanel2.Controls.Add(label3, 0, 1);
+            tableLayoutPanel2.Controls.Add(textBox3, 1, 1);
+            tableLayoutPanel2.Controls.Add(button2, 1, 2);
+            tableLayoutPanel2.Controls.Add(button1, 0, 2);
+            tableLayoutPanel2.Controls.Add(button3, 2, 2);
+            tableLayoutPanel2.Controls.Add(button4, 3, 2);
+            tableLayoutPanel2.Controls.Add(button5, 4, 2);
+            tableLayoutPanel2.Controls.Add(label1, 2, 0);
+            tableLayoutPanel2.Controls.Add(textBox1, 3, 0);
+            tableLayoutPanel2.Location = new Point(12, 315);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 3;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 51.6666679F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 48.3333321F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
+            tableLayoutPanel2.Size = new Size(568, 103);
+            tableLayoutPanel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(100, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Account number:";
+            // 
+            // textBoxAccountNumberMovimentation
+            // 
+            textBoxAccountNumberMovimentation.Location = new Point(136, 3);
+            textBoxAccountNumberMovimentation.Name = "textBoxAccountNumberMovimentation";
+            textBoxAccountNumberMovimentation.Size = new Size(96, 23);
+            textBoxAccountNumberMovimentation.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(3, 36);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 4;
+            label3.Text = "Value:";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(136, 39);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(96, 23);
+            textBox3.TabIndex = 5;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(136, 73);
+            button2.Name = "button2";
+            button2.Size = new Size(96, 23);
+            button2.TabIndex = 6;
+            button2.Text = "Withdrawl";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(3, 73);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 23);
+            button1.TabIndex = 7;
+            button1.Text = "New";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(238, 73);
+            button3.Name = "button3";
+            button3.Size = new Size(101, 23);
+            button3.TabIndex = 8;
+            button3.Text = "Deposit";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(345, 73);
+            button4.Name = "button4";
+            button4.Size = new Size(110, 23);
+            button4.TabIndex = 9;
+            button4.Text = "Check balance";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(461, 73);
+            button5.Name = "button5";
+            button5.Size = new Size(104, 23);
+            button5.TabIndex = 10;
+            button5.Text = "Transfer";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(238, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(66, 15);
+            label1.TabIndex = 11;
+            label1.Text = "Transfer to:";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(345, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(110, 23);
+            textBox1.TabIndex = 12;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(861, 450);
+            Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -181,5 +319,17 @@
         private Button buttonNew;
         private Label labelLimit;
         private TextBox textBoxLimit;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Button button1;
+        private Button button2;
+        private Label label2;
+        private TextBox textBoxAccountNumberMovimentation;
+        private Label label3;
+        private TextBox textBox3;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Label label1;
+        private TextBox textBox1;
     }
 }

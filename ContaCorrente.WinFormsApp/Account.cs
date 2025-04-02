@@ -21,14 +21,22 @@ namespace ContaCorrente.WinFormsApp
             Limit = limit;
         }
 
-        public void Withdrawl()
+        public void Withdrawl(decimal value)
         {
-
+            if (value < Limit)
+                Balance -= value;
+            else
+                MessageBox.Show("Above limit!");
         }
 
-        public void Deposit()
+        public void Deposit(decimal value)
         {
+            Balance += value;
+        }
 
+        public string CheckBalance()
+        {
+            return  Name + " balance's R$" + Balance.ToString("F2");
         }
 
     }
