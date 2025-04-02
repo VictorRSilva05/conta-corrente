@@ -236,6 +236,7 @@
             button2.TabIndex = 6;
             button2.Text = "Withdrawl";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -245,6 +246,7 @@
             button1.TabIndex = 7;
             button1.Text = "New";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 

@@ -21,12 +21,15 @@ namespace ContaCorrente.WinFormsApp
             Limit = limit;
         }
 
-        public void Withdrawl(decimal value)
+        public string Withdrawl(decimal value)
         {
             if (value < Limit)
+            {
                 Balance -= value;
+                return "R$" + value.ToString("F2") + " has been removed from your account";
+            }
             else
-                MessageBox.Show("Above limit!");
+                return "Above limit!";
         }
 
         public string Deposit(decimal value)
@@ -38,7 +41,7 @@ namespace ContaCorrente.WinFormsApp
 
         public string CheckBalance()
         {
-            return  Name + " balance's R$" + Balance.ToString("F2");
+            return Name + " balance's R$" + Balance.ToString("F2");
         }
 
     }

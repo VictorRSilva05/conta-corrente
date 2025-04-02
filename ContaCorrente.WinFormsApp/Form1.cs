@@ -68,5 +68,21 @@ namespace ContaCorrente.WinFormsApp
 
             ClearMovimentationTextBoxes();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ClearMovimentationTextBoxes();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+
+            decimal value = Convert.ToDecimal(textBoxValueMovimentation.Text);
+
+            MessageBox.Show(account.Withdrawl(value));
+
+            ClearMovimentationTextBoxes();
+        }
     }
 }
