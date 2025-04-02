@@ -26,16 +26,20 @@ namespace ContaCorrente.WinFormsApp
             if (value < Limit)
             {
                 Balance -= value;
+                Transactions.Add("Debit R$-" + value.ToString("F2"));
                 return "R$" + value.ToString("F2") + " has been removed from your account";
             }
             else
+            {
                 return "Above limit!";
+            }
         }
 
         public string Deposit(decimal value)
         {
             Balance += value;
 
+            Transactions.Add("Credit R$+" + value.ToString("F2"));
             return "R$" + value.ToString("F2") + " has been deposited into your account";
         }
 
@@ -44,5 +48,14 @@ namespace ContaCorrente.WinFormsApp
             return Name + " balance's R$" + Balance.ToString("F2");
         }
 
+        public string BankStatement()
+        {
+            if (Transactions.Count == 0)
+            {
+                return "No transactions available.";
+            }
+
+            return string.Join(Environment.NewLine, Transactions);
+        }
     }
 }

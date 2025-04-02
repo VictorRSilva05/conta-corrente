@@ -99,5 +99,12 @@ namespace ContaCorrente.WinFormsApp
 
             ClearMovimentationTextBoxes();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+
+            MessageBox.Show(account.BankStatement());
+        }
     }
 }
