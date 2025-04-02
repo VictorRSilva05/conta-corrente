@@ -43,14 +43,14 @@
             label2 = new Label();
             textBoxAccountNumberMovimentation = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            textBoxValueMovimentation = new TextBox();
             button2 = new Button();
             button1 = new Button();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
+            textBoxTransferMovimentation = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
@@ -179,14 +179,14 @@
             tableLayoutPanel2.Controls.Add(label2, 0, 0);
             tableLayoutPanel2.Controls.Add(textBoxAccountNumberMovimentation, 1, 0);
             tableLayoutPanel2.Controls.Add(label3, 0, 1);
-            tableLayoutPanel2.Controls.Add(textBox3, 1, 1);
+            tableLayoutPanel2.Controls.Add(textBoxValueMovimentation, 1, 1);
             tableLayoutPanel2.Controls.Add(button2, 1, 2);
             tableLayoutPanel2.Controls.Add(button1, 0, 2);
             tableLayoutPanel2.Controls.Add(button3, 2, 2);
             tableLayoutPanel2.Controls.Add(button4, 3, 2);
             tableLayoutPanel2.Controls.Add(button5, 4, 2);
             tableLayoutPanel2.Controls.Add(label1, 2, 0);
-            tableLayoutPanel2.Controls.Add(textBox1, 3, 0);
+            tableLayoutPanel2.Controls.Add(textBoxTransferMovimentation, 3, 0);
             tableLayoutPanel2.Location = new Point(12, 315);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 3;
@@ -221,12 +221,12 @@
             label3.TabIndex = 4;
             label3.Text = "Value:";
             // 
-            // textBox3
+            // textBoxValueMovimentation
             // 
-            textBox3.Location = new Point(136, 39);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(96, 23);
-            textBox3.TabIndex = 5;
+            textBoxValueMovimentation.Location = new Point(136, 39);
+            textBoxValueMovimentation.Name = "textBoxValueMovimentation";
+            textBoxValueMovimentation.Size = new Size(96, 23);
+            textBoxValueMovimentation.TabIndex = 5;
             // 
             // button2
             // 
@@ -254,6 +254,7 @@
             button3.TabIndex = 8;
             button3.Text = "Deposit";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -283,12 +284,12 @@
             label1.TabIndex = 11;
             label1.Text = "Transfer to:";
             // 
-            // textBox1
+            // textBoxTransferMovimentation
             // 
-            textBox1.Location = new Point(345, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(110, 23);
-            textBox1.TabIndex = 12;
+            textBoxTransferMovimentation.Location = new Point(345, 3);
+            textBoxTransferMovimentation.Name = "textBoxTransferMovimentation";
+            textBoxTransferMovimentation.Size = new Size(110, 23);
+            textBoxTransferMovimentation.TabIndex = 12;
             // 
             // Form1
             // 
@@ -325,11 +326,11 @@
         private Label label2;
         private TextBox textBoxAccountNumberMovimentation;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox textBoxValueMovimentation;
         private Button button3;
         private Button button4;
         private Button button5;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox textBoxTransferMovimentation;
     }
 }

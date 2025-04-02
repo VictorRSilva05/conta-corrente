@@ -13,10 +13,10 @@ namespace ContaCorrente.WinFormsApp
 
         }
 
-        public Account(string accountNumber, string name, decimal balance, decimal limit)
+        public Account(string name, string accountNumber, decimal balance, decimal limit)
         {
-            AccountNumber = accountNumber;
             Name = name;
+            AccountNumber = accountNumber;
             Balance = balance;
             Limit = limit;
         }
@@ -29,9 +29,11 @@ namespace ContaCorrente.WinFormsApp
                 MessageBox.Show("Above limit!");
         }
 
-        public void Deposit(decimal value)
+        public string Deposit(decimal value)
         {
             Balance += value;
+
+            return "R$" + value.ToString("F2") + " has been deposited into your account";
         }
 
         public string CheckBalance()

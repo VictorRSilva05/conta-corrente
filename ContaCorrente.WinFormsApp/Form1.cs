@@ -37,6 +37,13 @@ namespace ContaCorrente.WinFormsApp
             textBoxLimit.Clear();
         }
 
+        private void ClearMovimentationTextBoxes()
+        {
+            textBoxAccountNumberMovimentation.Clear();
+            textBoxValueMovimentation.Clear();
+            textBoxTransferMovimentation.Clear();
+        }
+
         private void buttonNew_Click(object sender, EventArgs e)
         {
             ClearRegistrationTextBoxes();
@@ -47,6 +54,19 @@ namespace ContaCorrente.WinFormsApp
             var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
 
             MessageBox.Show(account.CheckBalance());
+
+            ClearMovimentationTextBoxes();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+
+            decimal value = Convert.ToDecimal(textBoxValueMovimentation.Text);
+
+            MessageBox.Show(account.Deposit(value));
+
+            ClearMovimentationTextBoxes();
         }
     }
 }
