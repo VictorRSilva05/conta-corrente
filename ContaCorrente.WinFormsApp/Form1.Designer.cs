@@ -110,6 +110,7 @@
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(108, 23);
             textBoxName.TabIndex = 1;
+            textBoxName.KeyPress += textBoxName_KeyPress;
             // 
             // textBoxNumber
             // 
@@ -117,6 +118,7 @@
             textBoxNumber.Name = "textBoxNumber";
             textBoxNumber.Size = new Size(108, 23);
             textBoxNumber.TabIndex = 2;
+            textBoxNumber.KeyPress += textBoxNumber_KeyPress;
             // 
             // labelInitialBalance
             // 
@@ -133,6 +135,7 @@
             textBoxInitialBalance.Name = "textBoxInitialBalance";
             textBoxInitialBalance.Size = new Size(108, 23);
             textBoxInitialBalance.TabIndex = 3;
+            textBoxInitialBalance.KeyPress += textBoxInitialBalance_KeyPress;
             // 
             // buttonNew
             // 
@@ -169,6 +172,7 @@
             textBoxLimit.Name = "textBoxLimit";
             textBoxLimit.Size = new Size(108, 23);
             textBoxLimit.TabIndex = 4;
+            textBoxLimit.KeyPress += textBoxLimit_KeyPress;
             // 
             // tableLayoutPanel2
             // 
@@ -216,6 +220,7 @@
             textBoxAccountNumberMovimentation.Name = "textBoxAccountNumberMovimentation";
             textBoxAccountNumberMovimentation.Size = new Size(96, 23);
             textBoxAccountNumberMovimentation.TabIndex = 6;
+            textBoxAccountNumberMovimentation.KeyPress += textBoxAccountNumberMovimentation_KeyPress;
             // 
             // label3
             // 
@@ -232,6 +237,7 @@
             textBoxValueMovimentation.Name = "textBoxValueMovimentation";
             textBoxValueMovimentation.Size = new Size(96, 23);
             textBoxValueMovimentation.TabIndex = 7;
+            textBoxValueMovimentation.KeyPress += textBoxValueMovimentation_KeyPress;
             // 
             // button2
             // 
@@ -298,6 +304,7 @@
             textBoxTransferMovimentation.Name = "textBoxTransferMovimentation";
             textBoxTransferMovimentation.Size = new Size(108, 23);
             textBoxTransferMovimentation.TabIndex = 8;
+            textBoxTransferMovimentation.KeyPress += textBoxTransferMovimentation_KeyPress;
             // 
             // button6
             // 

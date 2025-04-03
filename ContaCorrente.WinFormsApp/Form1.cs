@@ -51,7 +51,7 @@ namespace ContaCorrente.WinFormsApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+            var account = FindAccount();
 
             MessageBox.Show(account.CheckBalance());
 
@@ -60,7 +60,7 @@ namespace ContaCorrente.WinFormsApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+            var account = FindAccount();
 
             decimal value = Convert.ToDecimal(textBoxValueMovimentation.Text);
 
@@ -76,7 +76,7 @@ namespace ContaCorrente.WinFormsApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+            var account = FindAccount();
 
             decimal value = Convert.ToDecimal(textBoxValueMovimentation.Text);
 
@@ -87,7 +87,7 @@ namespace ContaCorrente.WinFormsApp
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var transferingAccount = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+            var transferingAccount = FindAccount();
             var receivingAccount = accounts.Find(a => a.AccountNumber == textBoxTransferMovimentation.Text);
 
             decimal value = Convert.ToDecimal(textBoxValueMovimentation.Text);
@@ -102,9 +102,79 @@ namespace ContaCorrente.WinFormsApp
 
         private void button6_Click(object sender, EventArgs e)
         {
-            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+            var account = FindAccount();
 
             MessageBox.Show(account.BankStatement());
+        }
+
+        private Account FindAccount()
+        {
+            var account = accounts.Find(a => a.AccountNumber == textBoxAccountNumberMovimentation.Text);
+
+            return account;
+        }
+
+        private void textBoxName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxInitialBalance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.') ;
+
+        }
+
+        private void textBoxLimit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.') ;
+        }
+
+        private void textBoxAccountNumberMovimentation_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxTransferMovimentation_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxValueMovimentation_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.') ;
         }
     }
 }
